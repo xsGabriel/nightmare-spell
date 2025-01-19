@@ -1,19 +1,20 @@
-// Frases do Feitiço
-const phrases = [
-    "Your soul has been weighed. Your virtue has been measured.",
-    "One step closer to the truth… one step further from the lies.",
-    "Welcome to the Nightmare. Overcome it… or perish.",
-    "The price of power is steep, yet you still yearn for it.",
+// Frases do Feitiço em Português
+const frases = [
+    "Sua alma foi pesada. Sua virtude foi medida.",
+    "Um passo mais próximo da verdade... um passo mais longe das mentiras.",
+    "Bem-vindo ao Pesadelo. Supere-o... ou pereça.",
+    "O preço do poder é alto, mas você ainda o deseja.",
 ];
 
-let index = 0;
+let indice = 0;
 const spellText = document.getElementById("spell-text");
 
 // Atualizar texto do Feitiço
-function updatePhrase() {
-    spellText.textContent = phrases[index];
-    index = (index + 1) % phrases.length; // Loop infinito nas frases
+function atualizarFrase() {
+    spellText.textContent = frases[indice];
+    indice = (indice + 1) % frases.length; // Loop infinito nas frases
 }
 
 // Troca de frase a cada 5 segundos
-setInterval(updatePhrase, 1000);
+setInterval(atualizarFrase, 5000);
+
